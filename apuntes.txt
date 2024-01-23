@@ -1,0 +1,73 @@
+Comandos básicos
+Configurar usuario a nivel global:
+git config --global user.email tuemail@ejemplo. com
+
+Configurar usuario a nivel local de un repositorio en particular:
+git config --local user.email tuemail@ejemplo.com
+
+Inicializar un repositorio:
+git init
+
+Verificar el status para visualizar el estado del área de trabajo:
+git status
+
+Añadir un archivo en concreto al área de ensayo:
+git add ‹archivo>
+
+Añadir todos los archivos y cambios:
+git add -A
+
+Registrar los cambios realizando un commit:
+git commit -m "mensaje de confirmación"
+
+Ver los commits realizados:
+git log
+git log --online
+
+Trabajar con remotos
+El concepto de remoto hace referencia a un repositorio en otro ordenador diferente
+al nuestro, de manera que con Git se hace posible enviar y recibir cambios de ese
+remoto.
+El uso más común es para crear un proyecto colaborativo en la nube en donde
+puedan conectarse múltiples colaboradores y de esta manera enviar y recibir
+cambios simultáneamente, es decir, compartir su código y sus cambios.
+A continuación se detallan los comandos más comunes a la hora de trabajar con
+repositorios remotos.
+
+Clonar un repositorio:
+git clone < https: //link-con-nombre-del-repositorio>
+
+Ver los remotos asociados actualmente al repositorio:
+git remote -v
+
+Subir cambios a un remoto (Importante: git push solamente carga los cambios que
+han sido confirmados)|
+git push
+git push ‹nombre-remoto>
+git push ‹ nombre-remoto> ‹nombre-rama>
+
+Recibir actualizaciones de un repositorio remoto:
+git pull ‹nombre-remoto>
+
+Configurar un remoto en un repositorio ya existente:
+git remote add origin < https://link-con-nombre-del-repositorio>
+Para inicializar  el repositorio: git init
+comprobar el estado: git status
+despues de crear un repositorio copiar link y pegar en terminal: git remote add origin https://github.com/nadereyz/github-code.git
+y seguidamente este lo que hace es cambiar el main "master" a nombre main git branch -M main
+este codigo es cuando ya se finaliza pues empujar al repositorio (origin es el origen de repositorio) git push -u origin main
+añadir/aplicar un fichero: git add nombredefichero.txt
+añadir/aplicar varios ficheros: git add .
+(es necesario poner este codigo) -> añadir un mensaje: git commit -m "cambios"
+para aplicar y subir a repositorio: git push origin main
+para aplicar y subir a repositorio pero en otra rama: git push origin *aqui poner el nombre de la rama)
+
+
+Ver las ramas (aparecera todo localy tambien remotas en el repositorio: git branch -a
+ver las ramas otra opcion unicamente en el mismo repositorio: git branch
+Crear una nueva rama: git branch nombre
+Cambiar a una rama: git checkout nombre
+Crear y cambiar a una rama: git checkout -b nombre
+Fusionar una rama: git merge nombre (primero git checkout a la rama
+donde queremos fusionar)
+Borrar una rama: git branch -d testing
